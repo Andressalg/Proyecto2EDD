@@ -1,8 +1,9 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package proyecto2.Estructuras.HashTables;
+*/
+package proyecto2.Estructuras;
+import java.util.Objects;
 
 
 /**
@@ -23,19 +24,19 @@ class Map<K, V> {
     // empty chains.
     public Map()
     {
-        bucketArray = new Lista<>();
+        bucketArray = new Lista<>(100000);
         numBuckets = 10;
         size = 0;
 
         // Create empty chains
         for (int i = 0; i < numBuckets; i++)
-            bucketArray.add(null);
+            bucketArray.addAtEnd(null);
     }
 
     public int size() { return size; }
     public boolean isEmpty() { return size() == 0; }
     
-      private final int hashCode (K key) {
+      private int hashCode (K key) {
         return Objects.hashCode(key);
     }
   
@@ -57,7 +58,7 @@ class Map<K, V> {
         int bucketIndex = getBucketIndex(key);
         int hashCode = hashCode(key);
         // Get head of chain
-        HashNodo<K, V> head = bucketArray.get(bucketIndex);
+        HashNodo<K, V> head = bucketArray.getFirst(bucketIndex);
 
         // Search for key in its chain
         HashNodo<K, V> prev = null;
@@ -82,7 +83,7 @@ class Map<K, V> {
         if (prev != null)
             prev.next = head.next;
         else
-            bucketArray.set(bucketIndex, head.next);
+            bucketArray.setArray(bucketIndex, head.next);
 
         return head.value;
     }
