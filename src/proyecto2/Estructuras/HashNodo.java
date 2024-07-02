@@ -11,7 +11,6 @@ package proyecto2.Estructuras;
 class HashNodo<K, V> {
     K key;
     V value;
-      final int hashCode;
 
     // Reference to next node
     HashNodo<K, V> next;
@@ -19,8 +18,19 @@ class HashNodo<K, V> {
     // Constructor
     public HashNodo(K key, V value, int hashCode)
     {
-        this.key = key;
-        this.value = value;
-          this.hashCode = hashCode;
+        this(key, value);
     }
+
+    // Constructor
+    public HashNodo(String key, String value) {
+        this.key = (K) key;
+        this.value = (V) value;
+    }
+
+    private HashNodo(K key, V value) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    
 }
+
