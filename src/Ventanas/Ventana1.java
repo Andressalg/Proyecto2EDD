@@ -4,6 +4,10 @@
  */
 package Ventanas;
 
+import Clases.LectorArchivos;
+import java.io.IOException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author salom
@@ -54,10 +58,24 @@ public class Ventana1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Iniciar_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Iniciar_btnMouseClicked
-        Ventana2 v2 = new Ventana2();
-        v2.setLocationRelativeTo(null);
-        v2.setVisible(true);
-        this.dispose();
+        boolean archivosCargados = true;
+        LectorArchivos lectorArchivo = new LectorArchivos();
+        try{
+            LectorArchivos.leerArchivo("../Archivos/FndCompl.txt");
+            LectorArchivos.leerArchivo("../Archivos/GraphQLREST.txt");
+            LectorArchivos.leerArchivo("../Archivos/gridconfig.txt");
+            LectorArchivos.leerArchivo("../Archivos/i18n.txt");
+        } catch (IOException e) {
+            archivosCargados = false;
+            return;
+        }
+        
+        if(archivosCargados){
+            Ventana2 v2 = new Ventana2();
+            v2.setLocationRelativeTo(null);
+            v2.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_Iniciar_btnMouseClicked
 
     /**
