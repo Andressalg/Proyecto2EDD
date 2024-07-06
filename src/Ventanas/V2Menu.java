@@ -10,12 +10,12 @@ import javax.swing.JOptionPane;
  *
  * @author salom
  */
-public class Ventana2 extends javax.swing.JFrame {
+public class V2Menu extends javax.swing.JFrame {
 
     /**
      * Creates new form Ventana2
      */
-    public Ventana2() {
+    public V2Menu() {
         initComponents();
         this.setResizable(false);
     }
@@ -92,7 +92,7 @@ public class Ventana2 extends javax.swing.JFrame {
      * @param evt 
      */
     private void Agregar_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Agregar_btnMouseClicked
-        Ventana3 v3 = new Ventana3();
+        V3Agregar_Resumen v3 = new V3Agregar_Resumen();
         v3.setLocationRelativeTo(null);
         v3.setVisible(true);
         this.dispose();
@@ -104,7 +104,7 @@ public class Ventana2 extends javax.swing.JFrame {
      * @param evt 
      */
     private void Analizar_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Analizar_btnMouseClicked
-        Ventana4 v4 = new Ventana4();
+        V4Analizar v4 = new V4Analizar();
         v4.setLocationRelativeTo(null);
         v4.setVisible(true);
         this.dispose();
@@ -116,7 +116,7 @@ public class Ventana2 extends javax.swing.JFrame {
      * @param evt 
      */
     private void Buscar_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Buscar_btnMouseClicked
-        Ventana5 v5 = new Ventana5();
+        V5Buscar v5 = new V5Buscar();
         v5.setLocationRelativeTo(null);
         v5.setVisible(true);
         this.dispose();
@@ -148,20 +148,21 @@ public class Ventana2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Ventana2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(V2Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Ventana2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(V2Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Ventana2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(V2Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Ventana2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(V2Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Ventana2().setVisible(true);
+                new V2Menu().setVisible(true);
             }
         });
     }

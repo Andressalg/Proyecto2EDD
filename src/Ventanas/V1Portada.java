@@ -12,12 +12,12 @@ import javax.swing.JOptionPane;
  *
  * @author salom
  */
-public class Ventana1 extends javax.swing.JFrame {
+public class V1Portada extends javax.swing.JFrame {
 
     /**
      * Creates new form Ventana1
      */
-    public Ventana1() {
+    public V1Portada() {
         initComponents();
         this.setResizable(false);
     }
@@ -35,7 +35,6 @@ public class Ventana1 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(500, 500));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -71,7 +70,7 @@ public class Ventana1 extends javax.swing.JFrame {
         }
         
         if(archivosCargados){
-            Ventana2 v2 = new Ventana2();
+            V2Menu v2 = new V2Menu();
             v2.setLocationRelativeTo(null);
             v2.setVisible(true);
             this.dispose();
@@ -95,20 +94,21 @@ public class Ventana1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Ventana1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(V1Portada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Ventana1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(V1Portada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Ventana1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(V1Portada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Ventana1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(V1Portada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Ventana1().setVisible(true);
+                new V1Portada().setVisible(true);
                 
                 
             }

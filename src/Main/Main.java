@@ -5,7 +5,7 @@
 package Main;
 
 import static Clases.LectorArchivos.leerArchivo;
-import Ventanas.Ventana1;
+import Ventanas.V1Portada;
 import java.io.IOException;
 
 /**
@@ -14,8 +14,8 @@ import java.io.IOException;
  */
 public class Main {
     
-    public static void main(String[] args) throws IOException{
-        Ventana1 v1 = new Ventana1();
+    public static void main(String[] args){
+        V1Portada v1 = new V1Portada();
         v1.setLocationRelativeTo(null);
         v1.setVisible(true);
     }
