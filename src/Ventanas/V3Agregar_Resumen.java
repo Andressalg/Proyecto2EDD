@@ -4,6 +4,15 @@
  */
 package Ventanas;
 
+import Clases.Articulo;
+import Clases.ResumenExtractor;
+import static Clases.ResumenExtractor.extraerAutor;
+import static Clases.ResumenExtractor.extraerPalabrasClave;
+import java.io.File;
+import java.io.IOException;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author salom
@@ -26,19 +35,21 @@ public class V3Agregar_Resumen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        Titulo_resumen = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        titulo = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        Autores_resumen = new javax.swing.JTextArea();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        Cuerpo_resumen = new javax.swing.JTextArea();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        PalabrasClave = new javax.swing.JTextArea();
+        resumen = new javax.swing.JTextField();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        Autores = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        PalabrasClv = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         guardar = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -47,6 +58,8 @@ public class V3Agregar_Resumen extends javax.swing.JFrame {
         regresar = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+
+        jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -80,40 +93,51 @@ public class V3Agregar_Resumen extends javax.swing.JFrame {
         jLabel7.setText("Cuerpo:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 50, 30));
 
-        Titulo_resumen.setBackground(new java.awt.Color(204, 204, 204));
-        Titulo_resumen.setColumns(20);
-        Titulo_resumen.setRows(5);
-        getContentPane().add(Titulo_resumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 330, 40));
+        titulo.setBackground(new java.awt.Color(204, 204, 204));
+        titulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tituloActionPerformed(evt);
+            }
+        });
+        jScrollPane4.setViewportView(titulo);
 
-        Autores_resumen.setBackground(new java.awt.Color(204, 204, 204));
-        Autores_resumen.setColumns(20);
-        Autores_resumen.setForeground(new java.awt.Color(0, 0, 0));
-        Autores_resumen.setRows(5);
-        jScrollPane2.setViewportView(Autores_resumen);
+        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 330, 40));
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 330, 40));
+        resumen.setBackground(new java.awt.Color(204, 204, 204));
+        resumen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resumenActionPerformed(evt);
+            }
+        });
+        jScrollPane2.setViewportView(resumen);
 
-        Cuerpo_resumen.setBackground(new java.awt.Color(204, 204, 204));
-        Cuerpo_resumen.setColumns(20);
-        Cuerpo_resumen.setForeground(new java.awt.Color(0, 0, 0));
-        Cuerpo_resumen.setRows(5);
-        jScrollPane1.setViewportView(Cuerpo_resumen);
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 330, 90));
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 330, 80));
+        Autores.setBackground(new java.awt.Color(204, 204, 204));
+        Autores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AutoresActionPerformed(evt);
+            }
+        });
+        jScrollPane5.setViewportView(Autores);
 
-        PalabrasClave.setBackground(new java.awt.Color(204, 204, 204));
-        PalabrasClave.setColumns(20);
-        PalabrasClave.setForeground(new java.awt.Color(0, 0, 0));
-        PalabrasClave.setRows(5);
-        jScrollPane3.setViewportView(PalabrasClave);
-
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 330, 50));
+        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 330, 40));
 
         jLabel8.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 102, 0));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Palabras Clave:");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 100, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 100, -1));
+
+        PalabrasClv.setBackground(new java.awt.Color(204, 204, 204));
+        PalabrasClv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PalabrasClvActionPerformed(evt);
+            }
+        });
+        jScrollPane1.setViewportView(PalabrasClv);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 330, 60));
 
         jPanel3.setBackground(new java.awt.Color(255, 102, 0));
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -195,12 +219,55 @@ public class V3Agregar_Resumen extends javax.swing.JFrame {
      * @param evt 
      */
     private void Agregar_fileChooserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Agregar_fileChooserMouseClicked
-        
+        JFileChooser fileChooser = new JFileChooser();
+        int result = fileChooser.showOpenDialog(null);
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            try {
+                Articulo articulo = ResumenExtractor.crearArticulo_Archivo(selectedFile);
+                // Aqui ya teniendo el obj deberia irse al map
+            }catch(IOException e){
+                JOptionPane.showMessageDialog(null, "Error al leer el archivo");
+            }
+        }
     }//GEN-LAST:event_Agregar_fileChooserMouseClicked
-
+    
+    /**
+     * Boton para guardar el articulo ingresado manualmente al hash table
+     * @param evt 
+     */
     private void guardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardarMouseClicked
+
+        String Titulotext = titulo.getText();
+        String AutoresText = Autores.getText();
+        String ResumenText = resumen.getText();
+        String PalabrasText = PalabrasClv.getText();
+        String[] autores = extraerAutor(AutoresText);
+        String[] palabrasClave = extraerPalabrasClave(PalabrasText);
         
+        try{
+            Articulo articulo = ResumenExtractor.crearArticuloDesdeTextAreas(Titulotext, autores, ResumenText, palabrasClave);
+            
+        }catch(IOException e){
+            JOptionPane.showMessageDialog(null, "Error al guardar el resumen");
+        }
     }//GEN-LAST:event_guardarMouseClicked
+
+    private void tituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tituloActionPerformed
+        
+    }//GEN-LAST:event_tituloActionPerformed
+
+    private void AutoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AutoresActionPerformed
+    
+    }//GEN-LAST:event_AutoresActionPerformed
+
+    private void resumenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resumenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_resumenActionPerformed
+
+    private void PalabrasClvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PalabrasClvActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PalabrasClvActionPerformed
 
     /**
      * @param args the command line arguments
@@ -240,10 +307,8 @@ public class V3Agregar_Resumen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Agregar_fileChooser;
-    private javax.swing.JTextArea Autores_resumen;
-    private javax.swing.JTextArea Cuerpo_resumen;
-    private javax.swing.JTextArea PalabrasClave;
-    private javax.swing.JTextArea Titulo_resumen;
+    private javax.swing.JTextField Autores;
+    private javax.swing.JTextField PalabrasClv;
     private javax.swing.JLabel guardar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -258,7 +323,11 @@ public class V3Agregar_Resumen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel regresar;
+    private javax.swing.JTextField resumen;
+    private javax.swing.JTextField titulo;
     // End of variables declaration//GEN-END:variables
 }
