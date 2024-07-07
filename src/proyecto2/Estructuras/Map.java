@@ -17,7 +17,7 @@ class Map {
      
  }
  
- public void put(String key, String value){
+ public void put(String key, Articulo value){
      int hash = Math.abs(key.hashCode() % datos.length);
      datos[hash] = new HashNodo(key, value);
  }
@@ -52,8 +52,8 @@ class Map {
         }
  
  
- public void insertfromtxt (String NombreArchivo, Map y){
-     put("TXT", TXTConvertir(NombreArchivo));
+ public void insertfromtxt (String NombreArchivo map y){
+     y.put("TXT", TXTConvertir(NombreArchivo));
      
      
     

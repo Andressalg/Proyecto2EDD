@@ -14,20 +14,13 @@ class HashNodo<K, V> {
 
     HashNodo<K, V> next;
 
-    public HashNodo(K key, V value, int hashCode)
-    {
-        this(key, value);
-    }
+     
 
     
-    public HashNodo(String key, String value) {
+    public HashNodo(String key, Articulo value) {
         this.key = (K) key;
         this.value = (V) value;
     }
-
-    private HashNodo(K key, V value) {
-    }
-
   
     }
     
