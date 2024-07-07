@@ -26,13 +26,150 @@ public class V3Agregar_Resumen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        Titulo_resumen = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Autores_resumen = new javax.swing.JTextArea();
         jScrollPane1 = new javax.swing.JScrollPane();
+        Cuerpo_resumen = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        PalabrasClave = new javax.swing.JTextArea();
+        jLabel8 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        guardar = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        Agregar_fileChooser = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        regresar = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel3.setText("Agregar resumen desde archivos:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 240, 30));
+
+        jLabel4.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Agregar manualmente:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 230, 30));
+
+        jLabel5.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Autores:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 80, 30));
+
+        jLabel6.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Titulo:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 50, 40));
+
+        jLabel7.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Cuerpo:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 50, 30));
+
+        Titulo_resumen.setBackground(new java.awt.Color(204, 204, 204));
+        Titulo_resumen.setColumns(20);
+        Titulo_resumen.setRows(5);
+        getContentPane().add(Titulo_resumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 330, 40));
+
+        Autores_resumen.setBackground(new java.awt.Color(204, 204, 204));
+        Autores_resumen.setColumns(20);
+        Autores_resumen.setForeground(new java.awt.Color(0, 0, 0));
+        Autores_resumen.setRows(5);
+        jScrollPane2.setViewportView(Autores_resumen);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 330, 40));
+
+        Cuerpo_resumen.setBackground(new java.awt.Color(204, 204, 204));
+        Cuerpo_resumen.setColumns(20);
+        Cuerpo_resumen.setForeground(new java.awt.Color(0, 0, 0));
+        Cuerpo_resumen.setRows(5);
+        jScrollPane1.setViewportView(Cuerpo_resumen);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 330, 80));
+
+        PalabrasClave.setBackground(new java.awt.Color(204, 204, 204));
+        PalabrasClave.setColumns(20);
+        PalabrasClave.setForeground(new java.awt.Color(0, 0, 0));
+        PalabrasClave.setRows(5);
+        jScrollPane3.setViewportView(PalabrasClave);
+
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 330, 50));
+
+        jLabel8.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Palabras Clave:");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 100, -1));
+
+        jPanel3.setBackground(new java.awt.Color(255, 102, 0));
+        jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel3.setForeground(new java.awt.Color(255, 102, 0));
+        jPanel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        guardar.setBackground(new java.awt.Color(0, 0, 0));
+        guardar.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
+        guardar.setForeground(new java.awt.Color(0, 0, 0));
+        guardar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        guardar.setText("Guardar");
+        guardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        guardar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                guardarMouseClicked(evt);
+            }
+        });
+        jPanel3.add(guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 30));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 100, 30));
+
+        jPanel2.setBackground(new java.awt.Color(255, 102, 0));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Agregar_fileChooser.setFont(new java.awt.Font("Roboto Black", 0, 12)); // NOI18N
+        Agregar_fileChooser.setForeground(new java.awt.Color(0, 0, 0));
+        Agregar_fileChooser.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Agregar_fileChooser.setText("Agregar");
+        Agregar_fileChooser.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Agregar_fileChooser.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Agregar_fileChooserMouseClicked(evt);
+            }
+        });
+        jPanel2.add(Agregar_fileChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 30));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 50, 120, 30));
+
+        jPanel1.setBackground(new java.awt.Color(255, 102, 0));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        regresar.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
+        regresar.setForeground(new java.awt.Color(0, 0, 0));
+        regresar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        regresar.setText("Regresar");
+        regresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        regresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                regresarMouseClicked(evt);
+            }
+        });
+        jPanel1.add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, 0, 100, 30));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 420, 100, 30));
 
         jLabel2.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
@@ -40,17 +177,27 @@ public class V3Agregar_Resumen extends javax.swing.JFrame {
         jLabel2.setText("Agregar Resumen");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 210, 30));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        getContentPane().add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, -1, -1));
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Paginas.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 500));
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void regresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regresarMouseClicked
+        V2Menu v2 = new V2Menu();
+        v2.setLocationRelativeTo(null);
+        v2.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_regresarMouseClicked
+
+    private void Agregar_fileChooserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Agregar_fileChooserMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Agregar_fileChooserMouseClicked
+
+    private void guardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_guardarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -89,9 +236,26 @@ public class V3Agregar_Resumen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Agregar_fileChooser;
+    private javax.swing.JTextArea Autores_resumen;
+    private javax.swing.JTextArea Cuerpo_resumen;
+    private javax.swing.JTextArea PalabrasClave;
+    private javax.swing.JTextArea Titulo_resumen;
+    private javax.swing.JLabel guardar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JLabel regresar;
     // End of variables declaration//GEN-END:variables
 }
