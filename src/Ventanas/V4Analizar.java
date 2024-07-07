@@ -110,7 +110,10 @@ public class V4Analizar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void regresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regresarMouseClicked
-        // TODO add your handling code here:
+        V2Menu v2 = new V2Menu();
+        v2.setLocationRelativeTo(null);
+        v2.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_regresarMouseClicked
 
     /**

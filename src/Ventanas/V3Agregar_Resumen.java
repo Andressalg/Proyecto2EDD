@@ -190,13 +190,16 @@ public class V3Agregar_Resumen extends javax.swing.JFrame {
         v2.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_regresarMouseClicked
-
+    /**
+     * Boton para agregar archivos mediante el uso del jfilechooser
+     * @param evt 
+     */
     private void Agregar_fileChooserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Agregar_fileChooserMouseClicked
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_Agregar_fileChooserMouseClicked
 
     private void guardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardarMouseClicked
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_guardarMouseClicked
 
     /**

@@ -133,7 +133,10 @@ public class V5Buscar extends javax.swing.JFrame {
     }//GEN-LAST:event_BuscarMouseClicked
 
     private void regresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regresarMouseClicked
-        // TODO add your handling code here:
+        V2Menu v2 = new V2Menu();
+        v2.setLocationRelativeTo(null);
+        v2.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_regresarMouseClicked
 
     /**
