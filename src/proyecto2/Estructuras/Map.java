@@ -11,7 +11,7 @@ package proyecto2.Estructuras;
  */
 class Map {
     
- private HashNodo[] datos;
+ public HashNodo[] datos;
  public Map(){
      datos = new HashNodo[100];
      
@@ -37,7 +37,32 @@ class Map {
      if(datos[hash] != null && datos[hash].key.equals(key)){
          datos[hash] = null;
  }
- 
+
+     
+     
+     
+
 }
+ 
+ public String TXTConvertir (String NombreArchivo) {
+    String x = leerArchivo(NombreArchivo);
+    return x;
     
+            
+        }
+ 
+ 
+ public void insertfromtxt (String NombreArchivo, Map y){
+     put("TXT", TXTConvertir(NombreArchivo));
+     
+     
+    
+    
+     }
+ 
     }
+ 
+    
+
+
+    

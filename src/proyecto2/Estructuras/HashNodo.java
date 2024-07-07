@@ -30,7 +30,10 @@ class HashNodo<K, V> {
     private HashNodo(K key, V value) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+  
+    }
     
     
-}
+
 
