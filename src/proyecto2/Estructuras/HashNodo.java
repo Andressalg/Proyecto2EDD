@@ -12,23 +12,20 @@ class HashNodo<K, V> {
     K key;
     V value;
 
-    // Reference to next node
     HashNodo<K, V> next;
 
-    // Constructor
     public HashNodo(K key, V value, int hashCode)
     {
         this(key, value);
     }
 
-    // Constructor
+    
     public HashNodo(String key, String value) {
         this.key = (K) key;
         this.value = (V) value;
     }
 
     private HashNodo(K key, V value) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
   
